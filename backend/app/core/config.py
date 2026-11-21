@@ -10,6 +10,9 @@ class Settings:
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
     API_PREFIX: str = os.getenv("API_PREFIX", "/api")
 
+    # SQLite Database URL (defaults to local parceltrack.db)
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./parceltrack.db")
+
     # CORS origins permitted for local frontend development
     ALLOWED_ORIGINS: list[str] = [
         "http://localhost:5173",
